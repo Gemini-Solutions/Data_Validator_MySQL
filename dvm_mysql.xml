@@ -1,0 +1,105 @@
+<data>
+
+    <suite>
+
+        <mail>sachin.chand@geminisolutions.com</mail>
+        <project>GEMECO-API-PY-DVM</project>
+        <report_name>DVM_REPORT</report_name>
+        <mode>sequence</mode>
+        <env>prod</env>
+        <bridge_token>41679bf4-d761-48fb-9f69-04ce0580f88e1664443750633</bridge_token>
+        <username>sachin.chand</username>
+        <report_info>DVM_REPORT</report_info>
+    </suite>
+
+    <testcases>
+        <testcase>
+
+            <name>Different_DB</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_details</source_sql>
+            <target_sql>SELECT * from target_details</target_sql>
+            <source_db>source1</source_db>
+            <target_db>target1</target_db>
+            <keys>user_id</keys>
+            
+        </testcase>
+        <testcase>
+
+            <name>Multiple_keys</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_details</source_sql>
+            <target_sql>SELECT * from target_details</target_sql>
+            <source_db>source1</source_db>
+            <target_db>target1</target_db>
+            <keys>user_id,first_name</keys>
+            
+        </testcase>
+        <testcase>
+
+            <name>Same_database</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_details</source_sql>
+            <target_sql>SELECT * from target_details</target_sql>
+            <source_db>source2</source_db>
+            <target_db>target2</target_db>
+            <keys>user_id,first_name</keys>
+            
+        </testcase>
+        <testcase>
+
+            <name>Threshold</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_table</source_sql>
+            <target_sql>SELECT * from target_table</target_sql>
+            <source_db>source3</source_db>
+            <target_db>target3</target_db>
+            <threshold>2</threshold>
+            <keys>user_id,first_name</keys>
+            
+        </testcase>
+        <testcase>
+
+            <name>No_difference</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_table</source_sql>
+            <target_sql>SELECT * from source_table</target_sql>
+            <source_db>source3</source_db>
+            <target_db>target3</target_db>
+            <threshold>2</threshold>
+            <keys>user_id,first_name</keys>
+            
+        </testcase>
+        <testcase>
+
+            <name>Big_data_difference</name>
+            <run_flag>Y</run_flag>
+            <db_config_path>./config.conf</db_config_path>
+            <type>dvm</type>
+            <database>mysql</database>
+            <source_sql>SELECT * from source_details</source_sql>
+            <target_sql>SELECT * from target_details</target_sql>
+            <source_db>source4</source_db>
+            <target_db>target4</target_db>
+            <threshold>2</threshold>
+            <keys>user_id,first_name</keys>
+            
+        </testcase>
+
+    </testcases>
+</data>
