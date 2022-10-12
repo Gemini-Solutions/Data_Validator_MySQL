@@ -7,7 +7,7 @@
         <report_name>DVM_REPORT</report_name>
         <mode>sequence</mode>
         <env>prod</env>
-        <bridge_token>41679bf4-d761-48fb-9f69-04ce0580f88e1664443750633</bridge_token>
+        <bridge_token>41679bf4-d761-48fb-9f69-04ce0dsff88e1664443750633</bridge_token>
         <username>sachin.chand</username>
         <report_info>DVM_REPORT</report_info>
     </suite>
